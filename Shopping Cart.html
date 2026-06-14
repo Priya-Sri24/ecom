@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAISON — Your Bag</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/shopping-cart.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span>✦</span>&nbsp;&nbsp;Free shipping on orders over $75 · New Season Arrivals Now Live&nbsp;&nbsp;<span>✦</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <ul class="nav-links">
+      <li><a href="Product Listing.html">Women</a></li>
+      <li><a href="Product Listing.html">Men</a></li>
+      <li><a href="Product Listing.html">Collections</a></li>
+      <li><a href="Product Listing.html">Sale</a></li>
+    </ul>
+
+    <a href="Homepage.html" class="nav-logo">Maison</a>
+
+    <div class="nav-actions">
+      <button class="nav-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <button class="nav-action-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="nav-action-btn" aria-label="Account"><i class="far fa-user"></i></button>
+      <button class="nav-action-btn" aria-label="Wishlist" onclick="location.href='wishlist.html'" style="position:relative">
+        <i class="fas fa-heart"></i>
+        <span class="wishlist-badge" style="display:none; position:absolute; top:-6px; right:-6px; background:#c44; color:#fff; font-size:11px; padding:2px 6px; border-radius:999px;">0</span>
+      </button>
+      <button class="nav-action-btn" aria-label="Cart" style="position:relative">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge" id="cartBadge">3</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="Homepage.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span class="current">Your Bag</span>
+    </div>
+    <div class="page-title-row">
+      <h1 class="page-title">Your Bag <span id="itemCountText">3 items</span></h1>
+      <a href="Product Listing.html" class="continue-shopping-link">
+        <i class="fas fa-arrow-left" style="font-size:10px;"></i>
+        Continue Shopping
+      </a>
+    </div>
+  </div>
+
+  <!-- Cart Layout -->
+  <div class="cart-layout">
+
+    <!-- Left Column: Items -->
+    <div class="cart-left">
+      <div class="cart-items-list" id="cartItemsList"></div>
+
+      <!-- Promo Code -->
+      <div class="promo-section">
+        <p class="promo-title">Promo Code</p>
+        <div class="promo-row">
+          <input type="text" class="promo-input" id="promoInput" placeholder="Enter your promo code">
+          <button class="promo-btn" onclick="applyPromo()">Apply</button>
+        </div>
+        <p class="promo-note">Enter a valid promo code to receive a discount on your order.</p>
+        <div class="promo-applied" id="promoApplied">
+          <i class="fas fa-check-circle"></i>
+          <span>Code <strong>MAISON15</strong> applied — 15% off your order!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Order Summary -->
+    <div class="cart-right">
+      <div class="order-summary">
+        <h2 class="summary-title">Order Summary</h2>
+
+        <div class="summary-lines">
+          <div class="summary-line">
+            <span class="summary-label">Subtotal (<span id="summaryItemCount">3</span> items)</span>
+            <span class="summary-value" id="summarySubtotal">$1,640</span>
+          </div>
+          <div class="summary-line" id="discountLine" style="display:none;">
+            <span class="summary-label">Promo (MAISON15)</span>
+            <span class="summary-value discount" id="discountValue">−$246</span>
+          </div>
+          <div class="summary-line">
+            <span class="summary-label">Estimated Shipping</span>
+            <span class="summary-value free">Free</span>
+          </div>
+          <div class="summary-line">
+            <span class="summary-label">Estimated Tax</span>
+            <span class="summary-value" id="summaryTax">$131</span>
+          </div>
+        </div>
+
+        <hr class="summary-divider">
+
+        <div class="summary-total">
+          <span class="summary-total-label">Total</span>
+          <span class="summary-total-value" id="summaryTotal">$1,771</span>
+        </div>
+
+        <a href="Checkout.html" class="checkout-btn">
+          <i class="fas fa-lock" style="font-size:11px;"></i>
+          Proceed to Checkout
+        </a>
+
+        <a href="Product Listing.html" class="summary-continue-link">
+          <i class="fas fa-arrow-left" style="font-size:9px; margin-right: 6px;"></i>
+          Continue Shopping
+        </a>
+
+        <!-- Secure Badges -->
+        <div class="secure-badges">
+          <p class="secure-badges-title">Secure &amp; Trusted Checkout</p>
+          <div class="secure-badges-icons">
+            <div class="secure-badge-item">
+              <i class="fas fa-lock"></i>
+              <span>SSL<br>Secure</span>
+            </div>
+            <div class="secure-badge-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Buyer<br>Protected</span>
+            </div>
+            <div class="secure-badge-item">
+              <i class="fas fa-undo-alt"></i>
+              <span>Easy<br>Returns</span>
+            </div>
+            <div class="secure-badge-item">
+              <i class="fas fa-truck"></i>
+              <span>Free<br>Shipping</span>
+            </div>
+          </div>
+          <div class="payment-methods">
+            <div class="payment-icon">VISA</div>
+            <div class="payment-icon">MC</div>
+            <div class="payment-icon">AMEX</div>
+            <div class="payment-icon">PayPal</div>
+            <div class="payment-icon">Apple Pay</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- You Might Also Like -->
+  <section class="upsell-section">
+    <div class="upsell-header">
+      <div>
+        <p class="upsell-eyebrow">Complete Your Look</p>
+        <h2 class="upsell-title">You Might Also Like</h2>
+      </div>
+      <a href="Product Listing.html" class="upsell-link">View All Products <i class="fas fa-arrow-right" style="font-size:10px;margin-left:6px;"></i></a>
+    </div>
+
+    <div class="upsell-grid">
+
+      <div class="product-card">
+        <div class="product-image-wrap">
+          <img src="assets/images/product_wide_leg_trousers_camel_upsell.jpg" alt="Elegant wide-leg tailored trousers in camel wool blend on a natural linen background showing clean lines and quality drape" width="400" height="533">
+          <span class="product-badge sale">Sale</span>
+          <button class="product-wishlist" onclick="toggleWishlist(this)"><i class="far fa-heart"></i></button>
+          <button class="product-quick-add">Quick Add</button>
+        </div>
+        <p class="product-brand">Theory</p>
+        <p class="product-title">High-Waist Wide-Leg Trousers</p>
+        <div class="product-pricing">
+          <span class="product-price product-price-sale">$210</span>
+          <span class="product-price-original">$325</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-wrap">
+          <img src="assets/images/product_cashmere_crewneck_ivory.jpg" alt="Luxuriously soft ivory cashmere crewneck sweater folded neatly on a pale stone surface, showing refined texture and clean minimal styling" width="400" height="533">
+          <span class="product-badge new">New</span>
+          <button class="product-wishlist" onclick="toggleWishlist(this)"><i class="far fa-heart"></i></button>
+          <button class="product-quick-add">Quick Add</button>
+        </div>
+        <p class="product-brand">Vince</p>
+        <p class="product-title">Relaxed Cashmere Crewneck</p>
+        <div class="product-pricing">
+          <span class="product-price">$345</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-wrap">
+          <img src="assets/images/product_strappy_sandal_gold.jpg" alt="Elegant strappy gold leather heeled sandal with thin ankle strap on clean white marble background, soft natural studio lighting" width="400" height="533">
+          <button class="product-wishlist" onclick="toggleWishlist(this)"><i class="far fa-heart"></i></button>
+          <button class="product-quick-add">Quick Add</button>
+        </div>
+        <p class="product-brand">Cult Gaia</p>
+        <p class="product-title">Strappy Heeled Sandal</p>
+        <div class="product-pricing">
+          <span class="product-price">$295</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h3>Stay in the Loop</h3>
+        <p>Be the first to hear about new arrivals, exclusive offers, and seasonal edits.</p>
+      </div>
+      <form class="footer-newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h2>Maison</h2>
+        <p>A modern fashion destination for the discerning individual. Curated with care, delivered with elegance.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Sale</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Affiliates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">hello@maisonstore.com</a></li>
+          <li><a href="#">+1 (888) 624-7666</a></li>
+          <li><a href="#">Live Chat</a></li>
+          <li><a href="#">Flagship Stores</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Maison. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Preferences</a>
+      </div>
+    </div>
+  </footer>
+
+    <script src="assets/js/shop-state.js"></script>
+    <script src="assets/js/shopping-cart.js"></script>
+
+
+</body></html>

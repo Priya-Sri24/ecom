@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MAISON — Wishlist</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/homepage.css">
+</head>
+<body>
+  <div class="announcement-bar">✦ Free shipping on orders over $75 ✦</div>
+
+  <nav class="nav" id="mainNav">
+    <ul class="nav-links">
+      <li><a href="Product Listing.html">Women</a></li>
+      <li><a href="Product Listing.html">Men</a></li>
+      <li><a href="Product Listing.html">Collections</a></li>
+      <li><a href="Product Listing.html">Sale</a></li>
+    </ul>
+    <a href="Homepage.html" class="nav-logo">Maison</a>
+    <div class="nav-actions">
+      <button class="nav-menu-btn" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
+      <button class="nav-action-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="nav-action-btn" aria-label="Account"><i class="far fa-user"></i></button>
+      <button class="nav-action-btn" aria-label="Wishlist" onclick="location.href='wishlist.html'" style="position:relative">
+        <i class="fas fa-heart"></i>
+        <span class="wishlist-badge" style="display:none; position:absolute; top:-6px; right:-6px; background:#c44; color:#fff; font-size:11px; padding:2px 6px; border-radius:999px;">0</span>
+      </button>
+      <button class="nav-action-btn" aria-label="Cart" onclick="location.href='Shopping Cart.html'" style="position:relative">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge" style="display:none; position:absolute; top:-6px; right:-6px; background:#000; color:#fff; font-size:11px; padding:2px 6px; border-radius:999px;">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Your Wishlist</h1>
+        <p class="item-count" id="wishlistCount">0 items</p>
+      </div>
+    </div>
+
+    <section class="wishlist-section">
+      <div class="products-grid" id="wishlistGrid">
+        <!-- rendered wishlist cards -->
+      </div>
+
+      <div id="emptyWishlist" style="display:none; text-align:center; padding:48px;">
+        <h3>Your wishlist is empty</h3>
+        <p>Save items you love and they’ll appear here.</p>
+        <a href="Product Listing.html" class="btn-primary">Start Shopping</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom"><p>© 2025 Maison. All rights reserved.</p></div>
+  </footer>
+
+  <script src="assets/js/shop-state.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+</body>
+</html>

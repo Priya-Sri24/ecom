@@ -1,0 +1,570 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dresses — MAISON</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/product-listing.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span>✦</span>&nbsp;&nbsp;Free shipping on orders over $75 · New Season Arrivals Now Live&nbsp;&nbsp;<span>✦</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <ul class="nav-links">
+      <li><a href="Product Listing.html" class="active">Women</a></li>
+      <li><a href="Product Listing.html">Men</a></li>
+      <li><a href="Product Listing.html">Collections</a></li>
+      <li><a href="Product Listing.html">Sale</a></li>
+    </ul>
+    <a href="Homepage.html" class="nav-logo">Maison</a>
+    <div class="nav-actions">
+      <button class="nav-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <button class="nav-action-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="nav-action-btn" aria-label="Account"><i class="far fa-user"></i></button>
+      <button class="nav-action-btn" aria-label="Wishlist" onclick="location.href='wishlist.html'" style="position:relative">
+        <i class="fas fa-heart"></i>
+        <span class="wishlist-badge" style="display:none; position:absolute; top:-6px; right:-6px; background:#c44; color:#fff; font-size:11px; padding:2px 6px; border-radius:999px;">0</span>
+      </button>
+      <button class="nav-action-btn" aria-label="Cart" style="position:relative">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">3</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+      <a href="Homepage.html">Home</a>
+      <span class="breadcrumb-sep"><i class="fas fa-chevron-right" style="font-size:9px;"></i></span>
+      <a href="Product Listing.html">Women</a>
+      <span class="breadcrumb-sep"><i class="fas fa-chevron-right" style="font-size:9px;"></i></span>
+      <span class="current">Dresses</span>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Dresses</h1>
+        <p class="item-count">148 items</p>
+        <div class="page-header-divider"></div>
+      </div>
+      <div class="page-controls">
+        <div class="sort-select-wrapper">
+          <select aria-label="Sort by">
+            <option>Sort by: Newest</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Best Sellers</option>
+            <option>Most Reviewed</option>
+          </select>
+        </div>
+        <div class="view-toggle">
+          <button class="view-btn" aria-label="List view" title="List view">
+            <i class="fas fa-list"></i>
+          </button>
+          <button class="view-btn active" aria-label="Grid view" title="Grid view">
+            <i class="fas fa-grip-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Catalog Layout -->
+    <div class="catalog-layout">
+
+      <!-- Filter Sidebar -->
+      <aside class="filter-sidebar">
+        <div class="filter-header">
+          <h3>Filters</h3>
+          <a href="Product Listing.html" class="filter-clear-all" onclick="clearAllFilters(event)">Clear All</a>
+        </div>
+
+        <!-- Category -->
+        <div class="filter-group">
+          <div class="filter-group-header" onclick="toggleFilterGroup(this)">
+            <h4>Category</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="filter-group-body">
+            <ul class="filter-category-list">
+              <li><a href="#" class="active">All Dresses <span class="cat-count">148</span></a></li>
+              <li><a href="#">Mini Dresses <span class="cat-count">32</span></a></li>
+              <li><a href="#">Midi Dresses <span class="cat-count">54</span></a></li>
+              <li><a href="#">Maxi Dresses <span class="cat-count">28</span></a></li>
+              <li><a href="#">Slip Dresses <span class="cat-count">19</span></a></li>
+              <li><a href="#">Wrap Dresses <span class="cat-count">15</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Size -->
+        <div class="filter-group">
+          <div class="filter-group-header" onclick="toggleFilterGroup(this)">
+            <h4>Size</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="filter-group-body">
+            <div class="size-pills">
+              <button class="size-pill" onclick="togglePill(this)">XS</button>
+              <button class="size-pill active" onclick="togglePill(this)">S</button>
+              <button class="size-pill active" onclick="togglePill(this)">M</button>
+              <button class="size-pill" onclick="togglePill(this)">L</button>
+              <button class="size-pill" onclick="togglePill(this)">XL</button>
+              <button class="size-pill unavailable" disabled="">XXL</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color -->
+        <div class="filter-group">
+          <div class="filter-group-header" onclick="toggleFilterGroup(this)">
+            <h4>Colour</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="filter-group-body">
+            <div class="color-swatches">
+              <div class="color-swatch-item" onclick="toggleSwatch(this)">
+                <div class="color-swatch active" style="background:#1a1a1a;"></div>
+                <span class="color-swatch-label">Black</span>
+              </div>
+              <div class="color-swatch-item" onclick="toggleSwatch(this)">
+                <div class="color-swatch" style="background:#F5F0E8;border-color:rgba(0,0,0,0.12);"></div>
+                <span class="color-swatch-label">Cream</span>
+              </div>
+              <div class="color-swatch-item" onclick="toggleSwatch(this)">
+                <div class="color-swatch" style="background:#E8D5C4;"></div>
+                <span class="color-swatch-label">Nude</span>
+              </div>
+              <div class="color-swatch-item" onclick="toggleSwatch(this)">
+                <div class="color-swatch" style="background:#8B7355;"></div>
+                <span class="color-swatch-label">Camel</span>
+              </div>
+              <div class="color-swatch-item" onclick="toggleSwatch(this)">
+                <div class="color-swatch" style="background:#2C3E6B;"></div>
+                <span class="color-swatch-label">Navy</span>
+              </div>
+              <div class="color-swatch-item" onclick="toggleSwatch(this)">
+                <div class="color-swatch" style="background:#8B9E6B;"></div>
+                <span class="color-swatch-label">Sage</span>
+              </div>
+              <div class="color-swatch-item" onclick="toggleSwatch(this)">
+                <div class="color-swatch" style="background:#C4896A;"></div>
+                <span class="color-swatch-label">Terracotta</span>
+              </div>
+              <div class="color-swatch-item" onclick="toggleSwatch(this)">
+                <div class="color-swatch" style="background:#E8C4C4;"></div>
+                <span class="color-swatch-label">Blush</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="filter-group">
+          <div class="filter-group-header" onclick="toggleFilterGroup(this)">
+            <h4>Price</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="filter-group-body">
+            <div class="price-range-container">
+              <div class="price-range-values">
+                <span>$0</span>
+                <span>$2,500+</span>
+              </div>
+              <div class="price-slider-track">
+                <div class="price-slider-fill"></div>
+              </div>
+              <div class="price-range-inputs">
+                <input type="text" class="price-input" value="$0" aria-label="Min price">
+                <span class="price-input-sep">—</span>
+                <input type="text" class="price-input" value="$1,750" aria-label="Max price">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brand -->
+        <div class="filter-group">
+          <div class="filter-group-header" onclick="toggleFilterGroup(this)">
+            <h4>Brand</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="filter-group-body">
+            <div class="brand-list">
+              <label class="brand-checkbox">
+                <input type="checkbox" checked="">
+                <span class="brand-checkbox-label">Totême <span class="brand-count">18</span></span>
+              </label>
+              <label class="brand-checkbox">
+                <input type="checkbox">
+                <span class="brand-checkbox-label">Jacquemus <span class="brand-count">12</span></span>
+              </label>
+              <label class="brand-checkbox">
+                <input type="checkbox" checked="">
+                <span class="brand-checkbox-label">The Row <span class="brand-count">9</span></span>
+              </label>
+              <label class="brand-checkbox">
+                <input type="checkbox">
+                <span class="brand-checkbox-label">Sandro <span class="brand-count">22</span></span>
+              </label>
+              <label class="brand-checkbox">
+                <input type="checkbox">
+                <span class="brand-checkbox-label">Isabel Marant <span class="brand-count">15</span></span>
+              </label>
+              <label class="brand-checkbox">
+                <input type="checkbox">
+                <span class="brand-checkbox-label">Reformation <span class="brand-count">31</span></span>
+              </label>
+              <label class="brand-checkbox">
+                <input type="checkbox">
+                <span class="brand-checkbox-label">Zimmermann <span class="brand-count">11</span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products Area -->
+      <div class="products-area">
+
+        <!-- Active Filter Tags -->
+        <div class="active-filters">
+          <div class="filter-tag" onclick="removeFilter(this)">Black <i class="fas fa-times"></i></div>
+          <div class="filter-tag" onclick="removeFilter(this)">Size S <i class="fas fa-times"></i></div>
+          <div class="filter-tag" onclick="removeFilter(this)">Size M <i class="fas fa-times"></i></div>
+          <div class="filter-tag" onclick="removeFilter(this)">Totême <i class="fas fa-times"></i></div>
+          <div class="filter-tag" onclick="removeFilter(this)">The Row <i class="fas fa-times"></i></div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+
+          <!-- Product 1 -->
+          <div class="product-card" data-product-id="prod-black-silk-maxi" data-groups="women,new" onclick="if (!event.target.closest('button')) location.href='Product Detail.html'" role="link" tabindex="0">
+            <div class="product-image-wrap">
+              <img class="product-img primary" src="assets/images/dress_silk_maxi_black_primary.jpg" alt="A luxurious black silk maxi dress with a fluid draped silhouette, subtle cowl neck, and bias cut on a minimalist white studio background, elegant and modern" width="400" height="533">
+              <img class="product-img secondary" src="assets/images/dress_silk_maxi_black_model.jpg" alt="A model wearing a black silk maxi dress, photographed in editorial style in a bright studio, showing the flowing drape and elegant silhouette" width="400" height="533">
+              <span class="product-badge new">New</span>
+              <button class="product-wishlist" data-product-id="prod-black-silk-maxi"><i class="far fa-heart"></i></button>
+              <button class="product-quick-add" data-product-id="prod-black-silk-maxi">Quick Add</button>
+            </div>
+            <div class="product-info">
+              <p class="product-brand">Totême</p>
+              <p class="product-title">Fluid Silk Cowl-Neck Maxi Dress</p>
+              <div class="product-pricing">
+                <span class="product-price">$720</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-dot active" style="background:#1a1a1a;" title="Black"></div>
+                <div class="color-dot" style="background:#F5F0E8;border-color:rgba(0,0,0,0.12);" title="Cream"></div>
+                <div class="color-dot" style="background:#2C3E6B;" title="Navy"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card" data-product-id="prod-cream-linen-midi" data-groups="women,new" onclick="if (!event.target.closest('button')) location.href='Product Detail.html'" role="link" tabindex="0">
+            <div class="product-image-wrap">
+              <img class="product-img primary" src="assets/images/dress_linen_midi_cream_primary.jpg" alt="A structured cream linen midi dress with a clean a-line silhouette and subtle pleating, photographed on white studio background" width="400" height="533">
+              <img class="product-img secondary" src="assets/images/dress_linen_midi_cream_model.jpg" alt="A model wearing a cream linen midi dress outdoors in natural light, editorial fashion photography showing clean minimal style" width="400" height="533">
+              <span class="product-badge new">New</span>
+              <button class="product-wishlist liked" data-product-id="prod-cream-linen-midi"><i class="fas fa-heart"></i></button>
+              <button class="product-quick-add" data-product-id="prod-cream-linen-midi">Quick Add</button>
+            </div>
+            <div class="product-info">
+              <p class="product-brand">The Row</p>
+              <p class="product-title">Linen A-Line Midi Dress</p>
+              <div class="product-pricing">
+                <span class="product-price">$1,290</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-dot active" style="background:#F5F0E8;border-color:rgba(0,0,0,0.12);" title="Cream"></div>
+                <div class="color-dot" style="background:#8B9E6B;" title="Sage"></div>
+                <div class="color-dot" style="background:#8B7355;" title="Camel"></div>
+                <div class="color-dot" style="background:#1a1a1a;" title="Black"></div>
+                <span class="color-dot-more">+2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card" data-product-id="prod-terracotta-wrap" data-groups="women,sale" onclick="if (!event.target.closest('button')) location.href='Product Detail.html'" role="link" tabindex="0">
+            <div class="product-image-wrap">
+              <img class="product-img primary" src="assets/images/dress_wrap_terracotta_primary.jpg" alt="A terracotta wrap midi dress in flowing crepe fabric with V-neckline and tie waist, clean studio background" width="400" height="533">
+              <img class="product-img secondary" src="assets/images/dress_wrap_terracotta_model.jpg" alt="A model wearing a terracotta wrap dress in warm sunlit setting, editorial fashion photography" width="400" height="533">
+              <span class="product-badge sale">Sale</span>
+              <button class="product-wishlist" data-product-id="prod-terracotta-wrap"><i class="far fa-heart"></i></button>
+              <button class="product-quick-add" data-product-id="prod-terracotta-wrap">Quick Add</button>
+            </div>
+            <div class="product-info">
+              <p class="product-brand">Isabel Marant</p>
+              <p class="product-title">Crepe Wrap Midi Dress</p>
+              <div class="product-pricing">
+                <span class="product-price sale">$265</span>
+                <span class="product-price-original">$420</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-dot active" style="background:#C4896A;" title="Terracotta"></div>
+                <div class="color-dot" style="background:#1a1a1a;" title="Black"></div>
+                <div class="color-dot" style="background:#E8C4C4;" title="Blush"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card" data-product-id="prod-navy-silk-slip" data-groups="women" onclick="if (!event.target.closest('button')) location.href='Product Detail.html'" role="link" tabindex="0">
+            <div class="product-image-wrap">
+              <img class="product-img primary" src="assets/images/dress_slip_navy_silk_primary.jpg" alt="A refined navy silk slip dress with thin adjustable straps and bias cut, photographed on a clean pale gray studio background" width="400" height="533">
+              <img class="product-img secondary" src="assets/images/dress_slip_navy_silk_model.jpg" alt="A model wearing a navy silk slip dress in a sleek editorial photo, minimal accessories, sophisticated evening look" width="400" height="533">
+              <button class="product-wishlist" data-product-id="prod-navy-silk-slip"><i class="far fa-heart"></i></button>
+              <button class="product-quick-add" data-product-id="prod-navy-silk-slip">Quick Add</button>
+            </div>
+            <div class="product-info">
+              <p class="product-brand">Totême</p>
+              <p class="product-title">Silk Bias-Cut Slip Dress</p>
+              <div class="product-pricing">
+                <span class="product-price">$580</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-dot active" style="background:#2C3E6B;" title="Navy"></div>
+                <div class="color-dot" style="background:#1a1a1a;" title="Black"></div>
+                <div class="color-dot" style="background:#8B7355;" title="Camel"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card" data-product-id="prod-black-blazer-mini" data-groups="women,new" onclick="if (!event.target.closest('button')) location.href='Product Detail.html'" role="link" tabindex="0">
+            <div class="product-image-wrap">
+              <img class="product-img primary" src="assets/images/dress_mini_blazer_black_primary.jpg" alt="A structured black blazer mini dress with sharp lapels, cinched waist and double-breasted button detail, on white studio background" width="400" height="533">
+              <img class="product-img secondary" src="assets/images/dress_mini_blazer_black_model.jpg" alt="A model wearing a black blazer mini dress in editorial fashion photography, sophisticated and modern aesthetic" width="400" height="533">
+              <span class="product-badge new">New</span>
+              <button class="product-wishlist" data-product-id="prod-black-blazer-mini"><i class="far fa-heart"></i></button>
+              <button class="product-quick-add" data-product-id="prod-black-blazer-mini">Quick Add</button>
+            </div>
+            <div class="product-info">
+              <p class="product-brand">Jacquemus</p>
+              <p class="product-title">Double-Breasted Blazer Mini Dress</p>
+              <div class="product-pricing">
+                <span class="product-price">$945</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-dot active" style="background:#1a1a1a;" title="Black"></div>
+                <div class="color-dot" style="background:#8B7355;" title="Camel"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card" data-product-id="prod-floral-sage-maxi" data-groups="women" onclick="if (!event.target.closest('button')) location.href='Product Detail.html'" role="link" tabindex="0">
+            <div class="product-image-wrap">
+              <img class="product-img primary" src="assets/images/dress_floral_sage_maxi_primary.jpg" alt="A sage green floral-print maxi dress with smocked bodice and tiered skirt in lightweight cotton, on a clean white studio background" width="400" height="533">
+              <img class="product-img secondary" src="assets/images/dress_floral_sage_maxi_model.jpg" alt="A model wearing a sage green floral maxi dress photographed outdoors in natural sunlight, fresh and summery editorial fashion" width="400" height="533">
+              <button class="product-wishlist liked" data-product-id="prod-floral-sage-maxi"><i class="fas fa-heart"></i></button>
+              <button class="product-quick-add" data-product-id="prod-floral-sage-maxi">Quick Add</button>
+            </div>
+            <div class="product-info">
+              <p class="product-brand">Reformation</p>
+              <p class="product-title">Floral Smocked Maxi Dress</p>
+              <div class="product-pricing">
+                <span class="product-price">$348</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-dot active" style="background:#8B9E6B;" title="Sage"></div>
+                <div class="color-dot" style="background:#E8C4C4;" title="Blush"></div>
+                <div class="color-dot" style="background:#F5F0E8;border-color:rgba(0,0,0,0.12);" title="White"></div>
+                <span class="color-dot-more">+1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="product-card" data-product-id="prod-camel-knit-mini" data-groups="women,sale" onclick="if (!event.target.closest('button')) location.href='Product Detail.html'" role="link" tabindex="0">
+            <div class="product-image-wrap">
+              <img class="product-img primary" src="assets/images/dress_knit_camel_mini_primary.jpg" alt="A luxurious camel ribbed-knit bodycon mini dress with long sleeves and mock turtleneck, minimalist studio photography" width="400" height="533">
+              <img class="product-img secondary" src="assets/images/dress_knit_camel_mini_model.jpg" alt="A model wearing a camel knit turtleneck mini dress, sophisticated and sleek editorial fashion photography" width="400" height="533">
+              <span class="product-badge sale">Sale</span>
+              <button class="product-wishlist" data-product-id="prod-camel-knit-mini"><i class="far fa-heart"></i></button>
+              <button class="product-quick-add" data-product-id="prod-camel-knit-mini">Quick Add</button>
+            </div>
+            <div class="product-info">
+              <p class="product-brand">Sandro</p>
+              <p class="product-title">Ribbed Knit Turtleneck Mini Dress</p>
+              <div class="product-pricing">
+                <span class="product-price sale">$195</span>
+                <span class="product-price-original">$310</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-dot active" style="background:#8B7355;" title="Camel"></div>
+                <div class="color-dot" style="background:#1a1a1a;" title="Black"></div>
+                <div class="color-dot" style="background:#F5F0E8;border-color:rgba(0,0,0,0.12);" title="Cream"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="product-card" data-product-id="prod-blush-chiffon-midi" data-groups="women,new" onclick="if (!event.target.closest('button')) location.href='Product Detail.html'" role="link" tabindex="0">
+            <div class="product-image-wrap">
+              <img class="product-img primary" src="assets/images/dress_blush_chiffon_midi_primary.jpg" alt="A romantic blush pink chiffon midi dress with flutter sleeves and a flowy tiered skirt, photographed on a pale studio background" width="400" height="533">
+              <img class="product-img secondary" src="assets/images/dress_blush_chiffon_midi_model.jpg" alt="A model wearing a blush chiffon midi dress in an airy sunlit editorial setting, feminine and delicate fashion photography" width="400" height="533">
+              <span class="product-badge new">New</span>
+              <button class="product-wishlist" data-product-id="prod-blush-chiffon-midi"><i class="far fa-heart"></i></button>
+              <button class="product-quick-add" data-product-id="prod-blush-chiffon-midi">Quick Add</button>
+            </div>
+            <div class="product-info">
+              <p class="product-brand">Zimmermann</p>
+              <p class="product-title">Chiffon Flutter-Sleeve Midi Dress</p>
+              <div class="product-pricing">
+                <span class="product-price">$875</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-dot active" style="background:#E8C4C4;" title="Blush"></div>
+                <div class="color-dot" style="background:#F5F0E8;border-color:rgba(0,0,0,0.12);" title="Ivory"></div>
+                <div class="color-dot" style="background:#8B9E6B;" title="Sage"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div class="product-card" data-product-id="prod-black-wool-column" data-groups="women" onclick="if (!event.target.closest('button')) location.href='Product Detail.html'" role="link" tabindex="0">
+            <div class="product-image-wrap">
+              <img class="product-img primary" src="assets/images/dress_column_black_wool_primary.jpg" alt="A sleek black wool column midi dress with a modest crew neck and clean minimalist silhouette, photographed against pale gray backdrop" width="400" height="533">
+              <img class="product-img secondary" src="assets/images/dress_column_black_wool_model.jpg" alt="A model wearing a black wool column dress in a sophisticated editorial setting, highly polished minimalist fashion photography" width="400" height="533">
+              <button class="product-wishlist" data-product-id="prod-black-wool-column"><i class="far fa-heart"></i></button>
+              <button class="product-quick-add" data-product-id="prod-black-wool-column">Quick Add</button>
+            </div>
+            <div class="product-info">
+              <p class="product-brand">The Row</p>
+              <p class="product-title">Wool Crepe Column Midi Dress</p>
+              <div class="product-pricing">
+                <span class="product-price">$1,650</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-dot active" style="background:#1a1a1a;" title="Black"></div>
+                <div class="color-dot" style="background:#8B7355;" title="Camel"></div>
+                <div class="color-dot" style="background:#2C3E6B;" title="Navy"></div>
+                <span class="color-dot-more">+3</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- End Products Grid -->
+
+        <!-- Pagination -->
+        <div class="pagination-wrapper">
+          <button class="page-btn arrow" disabled="" aria-label="Previous page">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="page-btn active" aria-current="page">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <span class="page-ellipsis">…</span>
+          <button class="page-btn">9</button>
+          <button class="page-btn">10</button>
+          <button class="page-btn arrow" aria-label="Next page">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+      </div>
+      <!-- End Products Area -->
+
+    </div>
+    <!-- End Catalog Layout -->
+
+  </div>
+  <!-- End Page Wrapper -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h3>Stay in the Loop</h3>
+        <p>Be the first to hear about new arrivals, exclusive offers, and seasonal edits.</p>
+      </div>
+      <form class="footer-newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h2>Maison</h2>
+        <p>A modern fashion destination for the discerning individual. Curated with care, delivered with elegance.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Sale</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Affiliates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">hello@maisonstore.com</a></li>
+          <li><a href="#">+1 (888) 624-7666</a></li>
+          <li><a href="#">Live Chat</a></li>
+          <li><a href="#">Flagship Stores</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Maison. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Preferences</a>
+      </div>
+    </div>
+  </footer>
+
+    <script src="assets/js/shop-state.js"></script>
+    <script src="assets/js/product-listing.js"></script>
+
+
+</body></html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAISON - Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+<body>
+
+  <!-- Checkout Header -->
+  <header class="checkout-header">
+    <a href="Shopping Cart.html" class="back-to-cart">
+      <i class="fas fa-chevron-left"></i> Cart
+    </a>
+    <a href="Homepage.html" class="checkout-logo">Maison</a>
+    <div class="checkout-secure">
+      <i class="fas fa-lock"></i>
+      Secure Checkout
+    </div>
+    <div style="margin-left:12px;">
+      <button class="nav-action-btn" aria-label="Wishlist" onclick="location.href='wishlist.html'" style="position:relative">
+        <i class="fas fa-heart"></i>
+        <span class="wishlist-badge" style="display:none; position:absolute; top:-6px; right:-6px; background:#c44; color:#fff; font-size:11px; padding:2px 6px; border-radius:999px;">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="checkout-layout">
+
+    <!-- Left: Checkout Form -->
+    <div class="checkout-left">
+
+      <!-- Progress Steps -->
+      <div class="checkout-steps">
+        <div class="step-item active">
+          <div class="step-number">1</div>
+          <span>Information</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <span>Shipping</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <span>Payment</span>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="form-section">
+        <h2 class="form-section-title">Contact</h2>
+        <p class="form-section-subtitle">We'll use this to send your order confirmation.</p>
+        <div class="form-divider"></div>
+
+        <div class="form-row single">
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" placeholder="your@email.com">
+          </div>
+        </div>
+
+        <div class="checkbox-group" onclick="toggleCheckbox(this)">
+          <div class="custom-checkbox">
+            <i class="fas fa-check"></i>
+          </div>
+          <span class="checkbox-label">Keep me updated on news, new arrivals, and exclusive offers</span>
+        </div>
+      </div>
+
+      <!-- Shipping Address -->
+      <div class="form-section">
+        <h2 class="form-section-title">Shipping Address</h2>
+        <p class="form-section-subtitle">Enter the address where your order should be delivered.</p>
+        <div class="form-divider"></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="Charlotte">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Dubois">
+          </div>
+        </div>
+
+        <div class="form-row single" style="margin-bottom:16px;">
+          <div class="form-group">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-input" placeholder="123 Rue du Faubourg Saint-Honore">
+          </div>
+        </div>
+
+        <div class="form-row single" style="margin-bottom:16px;">
+          <div class="form-group">
+            <label class="form-label">Apartment, Suite, Unit <span style="font-weight:300;color:var(--gray-500);letter-spacing:0">(optional)</span></label>
+            <input type="text" class="form-input" placeholder="Apt 4B">
+          </div>
+        </div>
+
+        <div class="form-row triple" style="margin-bottom:16px;">
+          <div class="form-group">
+            <label class="form-label">City</label>
+            <input type="text" class="form-input" placeholder="New York">
+          </div>
+          <div class="form-group">
+            <label class="form-label">State</label>
+            <div class="form-select-wrap">
+              <select class="form-input form-select">
+                <option value="">Select...</option>
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Colorado</option>
+                <option>Connecticut</option>
+                <option>Florida</option>
+                <option>Georgia</option>
+                <option>Illinois</option>
+                <option>Massachusetts</option>
+                <option>Michigan</option>
+                <option>Minnesota</option>
+                <option selected="">New York</option>
+                <option>North Carolina</option>
+                <option>Ohio</option>
+                <option>Oregon</option>
+                <option>Pennsylvania</option>
+                <option>Texas</option>
+                <option>Virginia</option>
+                <option>Washington</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">ZIP Code</label>
+            <input type="text" class="form-input" placeholder="10001" maxlength="10">
+          </div>
+        </div>
+
+        <div class="form-row" style="margin-bottom:16px;">
+          <div class="form-group">
+            <label class="form-label">Country</label>
+            <div class="form-select-wrap">
+              <select class="form-input form-select">
+                <option value="">Select country...</option>
+                <option selected="">United States</option>
+                <option>Canada</option>
+                <option>United Kingdom</option>
+                <option>France</option>
+                <option>Germany</option>
+                <option>Italy</option>
+                <option>Australia</option>
+                <option>Japan</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-input" placeholder="+1 (555) 000-0000">
+          </div>
+        </div>
+      </div>
+
+      <!-- Shipping Method -->
+      <div class="form-section">
+        <h2 class="form-section-title">Shipping Method</h2>
+        <p class="form-section-subtitle">Choose how you'd like your order delivered.</p>
+        <div class="form-divider"></div>
+
+        <div class="shipping-options">
+          <div class="shipping-option selected" onclick="selectShipping(this)">
+            <div class="radio-indicator">
+              <div class="radio-dot"></div>
+            </div>
+            <div class="shipping-option-info">
+              <p class="shipping-option-name">Standard Shipping</p>
+              <p class="shipping-option-desc">5-7 business days · USPS Ground</p>
+            </div>
+            <span class="shipping-option-price free">Free</span>
+          </div>
+
+          <div class="shipping-option" onclick="selectShipping(this)">
+            <div class="radio-indicator">
+              <div class="radio-dot"></div>
+            </div>
+            <div class="shipping-option-info">
+              <p class="shipping-option-name">Express Shipping</p>
+              <p class="shipping-option-desc">2-3 business days · FedEx Priority</p>
+            </div>
+            <span class="shipping-option-price">$9.99</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="checkout-cta-wrap">
+        <button class="btn-checkout">
+          Continue to Payment <i class="fas fa-arrow-right"></i>
+        </button>
+        <p class="checkout-privacy">
+          <i class="fas fa-shield-alt"></i>
+          Your information is encrypted and secure
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Right: Order Summary -->
+    <div class="checkout-right">
+
+      <h2 class="summary-title">Order Summary</h2>
+      <p class="summary-item-count">3 items</p>
+      <div class="summary-divider-gold"></div>
+
+      <!-- Items -->
+      <div class="order-items">
+
+        <div class="order-item">
+          <div class="order-item-image">
+            <img src="assets/images/product_silk_slip_dress_cream.jpg" alt="A luxurious cream silk slip dress on a white garment form, minimalist studio background, soft shadows highlighting the fluid drape of the fabric" width="72" height="96">
+            <span class="item-qty-badge">1</span>
+          </div>
+          <div class="order-item-details">
+            <p class="order-item-brand">Toteme</p>
+            <p class="order-item-name">Silk Charmeuse Slip Dress</p>
+            <p class="order-item-variant">Size: XS · Ivory</p>
+          </div>
+          <div style="text-align:right;">
+            <span class="order-item-price">$485.00</span>
+          </div>
+        </div>
+
+        <div class="order-item">
+          <div class="order-item-image">
+            <img src="assets/images/product_tailored_blazer_navy.jpg" alt="Sharp navy tailored double-breasted blazer neatly folded showing clean lapels and structure, on light gray studio background" width="72" height="96">
+            <span class="item-qty-badge">1</span>
+          </div>
+          <div class="order-item-details">
+            <p class="order-item-brand">Jacquemus</p>
+            <p class="order-item-name">Double-Breasted Tailored Blazer</p>
+            <p class="order-item-variant">Size: 36 · Navy</p>
+          </div>
+          <div style="text-align:right;">
+            <span class="order-item-price">$890.00</span>
+          </div>
+        </div>
+
+        <div class="order-item">
+          <div class="order-item-image">
+            <img src="assets/images/product_leather_tote_tan.jpg" alt="A refined structured tan leather tote bag with gold hardware and top handles, photographed on a clean white marble surface with soft natural lighting" width="72" height="96">
+            <span class="item-qty-badge">1</span>
+          </div>
+          <div class="order-item-details">
+            <p class="order-item-brand">A.P.C.</p>
+            <p class="order-item-name">Cabas Market Leather Tote</p>
+            <p class="order-item-variant">One Size · Tan</p>
+          </div>
+          <div style="text-align:right;">
+            <span class="order-item-price order-item-price-sale">$265.00</span>
+            <span class="order-item-price-original">$380.00</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Promo Code -->
+      <div class="promo-section">
+        <div class="promo-toggle" id="promoToggle" onclick="togglePromo()">
+          <span class="promo-toggle-label">
+            <i class="fas fa-tag"></i>
+            Promo or Gift Code
+          </span>
+          <i class="fas fa-chevron-down promo-toggle-arrow"></i>
+        </div>
+        <div class="promo-input-wrap" id="promoInputWrap">
+          <input type="text" class="promo-input" placeholder="Enter code" id="promoInput">
+          <button class="promo-apply-btn">Apply</button>
+        </div>
+      </div>
+
+      <!-- Totals -->
+      <div class="order-totals">
+        <div class="total-line">
+          <span class="total-line-label">Subtotal</span>
+          <span class="total-line-value">$1,640.00</span>
+        </div>
+        <div class="total-line">
+          <span class="total-line-label">Shipping</span>
+          <span class="total-line-value free">Free</span>
+        </div>
+        <div class="total-line">
+          <span class="total-line-label">Estimated Tax</span>
+          <span class="total-line-value pending">Calculated at next step</span>
+        </div>
+        <div class="total-line">
+          <span class="total-line-label">Savings</span>
+            <span class="total-line-value" style="color:var(--error);">-$115.00</span>
+        </div>
+
+        <div class="total-main">
+          <span class="total-main-label">Total</span>
+          <div>
+            <span class="total-main-value">$1,640.00</span>
+            <p class="total-vat-note">Tax not included</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <i class="fas fa-undo-alt"></i>
+          <span>Free Returns</span>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-lock"></i>
+          <span>Secure Pay</span>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-shipping-fast"></i>
+          <span>Fast Delivery</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <script src="assets/js/checkout.js"></script>
+
+
+</body></html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAISON — Silk Charmeuse Wrap Dress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/product-detail.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span>✦</span>&nbsp;&nbsp;Free shipping on orders over $75 · New Season Arrivals Now Live&nbsp;&nbsp;<span>✦</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <ul class="nav-links">
+      <li><a href="Product Listing.html">Women</a></li>
+      <li><a href="Product Listing.html">Men</a></li>
+      <li><a href="Product Listing.html">Collections</a></li>
+      <li><a href="Product Listing.html">Sale</a></li>
+    </ul>
+    <a href="Homepage.html" class="nav-logo">Maison</a>
+    <div class="nav-actions">
+      <button class="nav-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <button class="nav-action-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="nav-action-btn" aria-label="Account"><i class="far fa-user"></i></button>
+      <button class="nav-action-btn" aria-label="Wishlist" onclick="location.href='wishlist.html'" style="position:relative">
+        <i class="fas fa-heart"></i>
+        <span class="wishlist-badge" style="display:none; position:absolute; top:-6px; right:-6px; background:#c44; color:#fff; font-size:11px; padding:2px 6px; border-radius:999px;">0</span>
+      </button>
+      <button class="nav-action-btn" aria-label="Cart" style="position:relative">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">3</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <ol class="breadcrumb">
+      <li><a href="Homepage.html">Home</a></li>
+      <li class="breadcrumb-sep"><i class="fas fa-chevron-right" style="font-size:8px;"></i></li>
+      <li><a href="Product Listing.html">Women</a></li>
+      <li class="breadcrumb-sep"><i class="fas fa-chevron-right" style="font-size:8px;"></i></li>
+      <li><a href="Product Listing.html">Dresses</a></li>
+      <li class="breadcrumb-sep"><i class="fas fa-chevron-right" style="font-size:8px;"></i></li>
+      <li class="active">Silk Charmeuse Wrap Dress</li>
+    </ol>
+  </div>
+
+  <!-- Product Detail -->
+  <div class="pdp-container">
+
+    <!-- Gallery Column -->
+    <div class="gallery-col">
+      <div class="gallery-main" id="galleryMain">
+        <img src="assets/images/product_silk_wrap_dress_ivory_main.jpg" alt="A flowing ivory silk charmeuse wrap dress on a model, shot in a bright minimalist studio, emphasizing the fluid drape of the fabric, long sleeves with delicate cuffs, deep V neckline with tie waist detail, elegant and luxurious feel" width="840" height="1120" id="mainImage">
+        <div class="gallery-badge">New Arrival</div>
+        <button class="gallery-zoom-btn" aria-label="Zoom"><i class="fas fa-expand-alt"></i></button>
+      </div>
+      <div class="gallery-thumbnails">
+        <div class="gallery-thumb active" onclick="switchImage(this, 'product_silk_wrap_dress_ivory_main.jpg', 'A flowing ivory silk charmeuse wrap dress on a model, studio setting, front view showing elegant drape and tie waist')">
+          <img src="assets/images/product_silk_wrap_dress_ivory_main.jpg" alt="Silk wrap dress front view ivory" width="200" height="267">
+        </div>
+        <div class="gallery-thumb" onclick="switchImage(this, 'product_silk_wrap_dress_ivory_detail.jpg', 'Close-up detail of the silk charmeuse wrap dress neckline and tie closure, showing the luxurious fabric texture and subtle sheen')">
+          <img src="assets/images/product_silk_wrap_dress_ivory_detail.jpg" alt="Silk wrap dress fabric detail close-up showing neckline and tie" width="200" height="267">
+        </div>
+        <div class="gallery-thumb" onclick="switchImage(this, 'product_silk_wrap_dress_ivory_back.jpg', 'Back view of the ivory silk charmeuse wrap dress on a model, showing the clean back silhouette and fabric movement')">
+          <img src="assets/images/product_silk_wrap_dress_ivory_back.jpg" alt="Silk wrap dress back view on model" width="200" height="267">
+        </div>
+        <div class="gallery-thumb" onclick="switchImage(this, 'product_silk_wrap_dress_ivory_lifestyle.jpg', 'Model wearing the ivory silk wrap dress in a sun-drenched interior setting, sitting gracefully showing the dress in a real lifestyle context')">
+          <img src="assets/images/product_silk_wrap_dress_ivory_lifestyle.jpg" alt="Silk wrap dress lifestyle shot on model in warm interior setting" width="200" height="267">
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Info Column -->
+    <div class="product-col">
+      <p class="product-brand-name">Totême</p>
+      <h1 class="product-title">Silk Charmeuse<br>Wrap Dress</h1>
+
+      <!-- Rating -->
+      <div class="product-rating-row">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <span class="rating-score">4.5</span>
+        <a class="rating-count" href="Product Detail.html#reviews">128 Reviews</a>
+      </div>
+
+      <!-- Price -->
+      <div class="product-price-row">
+        <span class="product-price-main">$129</span>
+      </div>
+
+      <!-- Color Selector -->
+      <div class="color-selector">
+        <div class="selector-label">
+          Color <span id="colorName">Ivory</span>
+        </div>
+        <div class="color-swatches">
+          <div class="color-swatch-wrap active" onclick="selectColor(this, 'Ivory')">
+            <div class="color-swatch" style="background: #F5F0E8; border-color: #E0D9CF;"></div>
+            <div class="color-tooltip">Ivory</div>
+          </div>
+          <div class="color-swatch-wrap" onclick="selectColor(this, 'Noir')">
+            <div class="color-swatch" style="background: #1A1A1A;"></div>
+            <div class="color-tooltip">Noir</div>
+          </div>
+          <div class="color-swatch-wrap" onclick="selectColor(this, 'Blush')">
+            <div class="color-swatch" style="background: #E8C5B8; border-color: #D4B0A3;"></div>
+            <div class="color-tooltip">Blush</div>
+          </div>
+          <div class="color-swatch-wrap" onclick="selectColor(this, 'Forest')">
+            <div class="color-swatch" style="background: #3D5A47;"></div>
+            <div class="color-tooltip">Forest</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Size Selector -->
+      <div class="size-selector">
+        <div class="size-label-row">
+          <div class="selector-label" style="margin-bottom:0;">
+            Size <span id="sizeName">M</span>
+          </div>
+          <a class="size-guide-link" href="Product Listing.html"><i class="fas fa-ruler-horizontal" style="font-size:10px;"></i> Size Guide</a>
+        </div>
+        <div class="size-pills" style="margin-top: 14px;">
+          <button class="size-pill out-of-stock" disabled="">XS</button>
+          <button class="size-pill" onclick="selectSize(this, 'S')">S</button>
+          <button class="size-pill active" onclick="selectSize(this, 'M')">M</button>
+          <button class="size-pill" onclick="selectSize(this, 'L')">L</button>
+          <button class="size-pill" onclick="selectSize(this, 'XL')">XL</button>
+        </div>
+      </div>
+
+      <!-- Quantity + Add to Bag -->
+      <div class="purchase-row">
+        <div class="qty-stepper">
+          <button class="qty-btn" onclick="adjustQty(-1)" aria-label="Decrease quantity">−</button>
+          <span class="qty-val" id="qtyVal">1</span>
+          <button class="qty-btn" onclick="adjustQty(1)" aria-label="Increase quantity">+</button>
+        </div>
+        <button class="btn-add-to-bag" data-product-id="prod-slip-cream" onclick="addToBag(this)">
+          <i class="fas fa-shopping-bag" style="font-size:14px;"></i>
+          Add to Bag
+        </button>
+      </div>
+
+      <!-- Wishlist -->
+      <button class="btn-wishlist" id="wishlistBtn" data-product-id="prod-slip-cream">
+        <i class="far fa-heart" id="wishlistIcon"></i>
+        Save to Wishlist
+      </button>
+
+      <!-- Trust Badges -->
+      <div class="trust-row">
+        <div class="trust-item">
+          <i class="fas fa-truck"></i>
+          <span>Free Shipping</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-undo"></i>
+          <span>Free Returns</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>Secure Checkout</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-leaf"></i>
+          <span>Sustainably Made</span>
+        </div>
+      </div>
+
+      <!-- Accordions -->
+      <div class="accordions">
+
+        <div class="accordion-item open">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="accordion-title">Description</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>Effortlessly elegant, the Silk Charmeuse Wrap Dress is cut from the finest Italian silk charmeuse. Its fluid wrap silhouette drapes beautifully over the body, while the adjustable self-tie waist creates a flattering fit for all figures.</p>
+              <br>
+              <ul>
+                <li>Deep V-neckline with elegant wrap closure</li>
+                <li>Long sleeves with delicate French cuffs</li>
+                <li>Adjustable tie waist for a tailored fit</li>
+                <li>Midi length, falling just below the knee</li>
+                <li>Lined throughout in silk habotai</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="accordion-title">Materials &amp; Care</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <ul>
+                <li>100% Italian silk charmeuse (shell)</li>
+                <li>100% silk habotai (lining)</li>
+                <li>Dry clean only — do not wring or tumble dry</li>
+                <li>Store on a padded hanger to maintain shape</li>
+                <li>Avoid prolonged exposure to direct sunlight</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="accordion-title">Delivery &amp; Returns</span>
+            <i class="fas fa-plus accordion-icon"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <ul>
+                <li>Free standard shipping on all orders over $75</li>
+                <li>Express delivery available at checkout (2–3 business days)</li>
+                <li>Free returns within 30 days of purchase</li>
+                <li>Items must be unworn and in original packaging</li>
+                <li>Final sale items are not eligible for return</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- You May Also Like -->
+  <section class="also-like-section">
+    <div class="section-header">
+      <div>
+        <p class="section-eyebrow">Complete the Look</p>
+        <h2 class="section-title">You May Also Like</h2>
+        <div class="divider"></div>
+      </div>
+      <a href="Product Listing.html" class="section-link">View All <i class="fas fa-arrow-right" style="font-size:10px;margin-left:6px;"></i></a>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card reveal-card">
+        <div class="product-image-wrap">
+          <img src="assets/images/product_recommendation_silk_cami_blush.jpg" alt="Delicate blush silk camisole on a mannequin, soft studio lighting, showing adjustable straps and lace trim at hem, elegant and feminine" width="400" height="533">
+          <span class="product-badge new">New</span>
+          <button class="product-wishlist" onclick="toggleCardWishlist(this)"><i class="far fa-heart"></i></button>
+          <button class="product-quick-add">Quick Add</button>
+        </div>
+        <p class="product-brand-label">Totême</p>
+        <p class="product-name">Silk Camisole Top</p>
+        <div class="product-pricing">
+          <span class="product-price">$198</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal-card">
+        <div class="product-image-wrap">
+          <img src="assets/images/product_recommendation_wide_leg_pants_ivory.jpg" alt="Ivory wide-leg silk trousers on a model, clean minimal studio, showing fluid drape and high waist, perfect pairing with the wrap dress" width="400" height="533">
+          <button class="product-wishlist" onclick="toggleCardWishlist(this)"><i class="far fa-heart"></i></button>
+          <button class="product-quick-add">Quick Add</button>
+        </div>
+        <p class="product-brand-label">Totême</p>
+        <p class="product-name">Fluid Wide-Leg Trousers</p>
+        <div class="product-pricing">
+          <span class="product-price">$345</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal-card">
+        <div class="product-image-wrap">
+          <img src="assets/images/product_recommendation_leather_mule_tan.jpg" alt="Refined tan leather block heel mule shoes on a marble surface, soft natural light, minimal and elegant design" width="400" height="533">
+          <span class="product-badge sale">Sale</span>
+          <button class="product-wishlist" onclick="toggleCardWishlist(this)"><i class="far fa-heart"></i></button>
+          <button class="product-quick-add">Quick Add</button>
+        </div>
+        <p class="product-brand-label">Jacquemus</p>
+        <p class="product-name">Block Heel Leather Mules</p>
+        <div class="product-pricing">
+          <span class="product-price product-price-sale">$280</span>
+          <span class="product-price-original">$395</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal-card">
+        <div class="product-image-wrap">
+          <img src="assets/images/product_recommendation_gold_earrings.jpg" alt="Elegant gold hoop earrings photographed on a white ceramic surface with soft shadows, minimalist jewelry photography" width="400" height="533">
+          <span class="product-badge new">New</span>
+          <button class="product-wishlist" onclick="toggleCardWishlist(this)"><i class="far fa-heart"></i></button>
+          <button class="product-quick-add">Quick Add</button>
+        </div>
+        <p class="product-brand-label">Oma The Label</p>
+        <p class="product-name">Sculptural Gold Hoop Earrings</p>
+        <div class="product-pricing">
+          <span class="product-price">$89</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h3>Stay in the Loop</h3>
+        <p>Be the first to hear about new arrivals, exclusive offers, and seasonal edits.</p>
+      </div>
+      <form class="footer-newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h2>Maison</h2>
+        <p>A modern fashion destination for the discerning individual. Curated with care, delivered with elegance.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Sale</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Affiliates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">hello@maisonstore.com</a></li>
+          <li><a href="#">+1 (888) 624-7666</a></li>
+          <li><a href="#">Live Chat</a></li>
+          <li><a href="#">Flagship Stores</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Maison. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Preferences</a>
+      </div>
+    </div>
+  </footer>
+
+    <script src="assets/js/shop-state.js"></script>
+    <script src="assets/js/product-detail.js"></script>
+
+
+</body></html>
