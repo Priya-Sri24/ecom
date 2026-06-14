@@ -32,15 +32,18 @@ button, input, select, textarea {
   min-width: 0;
 }
 
-/* FIX 1: Added missing .announcement-bar selector for orphaned properties */
 .announcement-bar {
+      background: #2C1810;
+      color: #FFFFFF;
       font-weight: 400;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       position: relative;
+      padding: 10px 24px;
+      text-align: center;
     }
     .announcement-bar span {
-      color: var(--gold);
+      color: #FFFFFF;
       font-weight: 500;
     }
 

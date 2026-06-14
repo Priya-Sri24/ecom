@@ -6,6 +6,7 @@
   <title>MAISON — Wishlist</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/homepage.css">
+  <link rel="stylesheet" href="assets/css/search.css">
 </head>
 <body>
   <div class="announcement-bar">✦ Free shipping on orders over $75 ✦</div>
@@ -20,7 +21,7 @@
     <a href="Homepage.html" class="nav-logo">Maison</a>
     <div class="nav-actions">
       <button class="nav-menu-btn" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
-      <button class="nav-action-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="nav-action-btn" aria-label="Search" onclick="openSearchOverlay()"><i class="fas fa-search"></i></button>
       <button class="nav-action-btn" aria-label="Account"><i class="far fa-user"></i></button>
       <button class="nav-action-btn" aria-label="Wishlist" onclick="location.href='wishlist.html'" style="position:relative">
         <i class="fas fa-heart"></i>
@@ -58,7 +59,18 @@
     <div class="footer-bottom"><p>© 2025 Maison. All rights reserved.</p></div>
   </footer>
 
+  <div id="searchOverlay">
+    <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="searchLabel">
+      <div class="search-panel-top">
+        <input type="search" class="search-input" placeholder="Search for products, brands, collections…" aria-label="Search products" oninput="handleSearchInput(event)">
+        <button type="button" class="search-close-btn" aria-label="Close search" onclick="closeSearchOverlay()">×</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
   <script src="assets/js/shop-state.js"></script>
   <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/search.js"></script>
 </body>
 </html>

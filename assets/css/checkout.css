@@ -34,8 +34,20 @@ img, picture, video, svg {
 button, input, select, textarea {
   min-width: 0;
 }
-      justify-content: space-between;
-    }
+
+.announcement-bar {
+  background: #2C1810;
+  color: #FFFFFF;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  text-align: center;
+}
+.announcement-bar span {
+  color: #FFFFFF;
+  font-weight: 500;
+}
 
     .checkout-logo {
       font-family: 'Cormorant Garamond', serif;
